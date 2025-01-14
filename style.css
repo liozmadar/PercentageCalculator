@@ -17,13 +17,13 @@ body {
 
 .calculator {
     max-width: 500px;
+    width: 100%; /* וודא שהמחשבון יתפוס 100% מהרוחב של המסך */
     background-color: #ffffff;
     padding: 40px;
     border: 2px solid #8bc34a; /* מסגרת ירוקה בהירה */
     border-radius: 10px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); /* הצללה בולטת */
     text-align: right;
-    width: 100%; /* מאפשר למחשב להסתגל לרוחב המסך */
 }
 
 h1 {
@@ -46,7 +46,7 @@ h1 {
     color: #555;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* יישור שדות הקלט לצד ימין */
+    justify-content: flex-start; /* יישור שדות הקלט לצד ימין */
     gap: 10px; /* רווח בין שדות הקלט לתוצאה */
 }
 
@@ -96,7 +96,7 @@ input[type="number"]:focus {
 @media (max-width: 600px) {
     .calculator {
         padding: 20px;
-        max-width: 100%;
+        max-width: 80%;
     }
 
     h1 {
