@@ -22,7 +22,8 @@ body {
     border: 2px solid #8bc34a; /* מסגרת ירוקה בהירה */
     border-radius: 10px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); /* הצללה בולטת */
-    text-align: right; /* יישור טקסט לימין */
+    text-align: right;
+    width: 100%; /* מאפשר למחשב להסתגל לרוחב המסך */
 }
 
 h1 {
@@ -37,7 +38,6 @@ h1 {
     padding: 10px;
     border-radius: 6px;
     margin: 10px 0;
-    text-align: right; /* יישור הטקסט בתוך כל שורת חישוב לימין */
 }
 
 .section p {
@@ -46,7 +46,7 @@ h1 {
     color: #555;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* יישור שדות הקלט לתחילת השורה (מצד ימין) */
+    justify-content: flex-end; /* יישור שדות הקלט לצד ימין */
     gap: 10px; /* רווח בין שדות הקלט לתוצאה */
 }
 
@@ -58,7 +58,7 @@ h1 {
     border: 1px solid #8bc34a; /* מסגרת ירוקה בהירה */
     border-radius: 6px;
     margin-top: 10px;
-    text-align: right; /* יישור התוצאה לימין */
+    text-align: center;
 }
 
 input[type="number"] {
@@ -90,4 +90,30 @@ input[type="number"]:focus {
     outline: none;
     border-color: #8bc34a;
     background-color: #fff;
+}
+
+/* התאמת עיצוב למסכים קטנים (כמו פלאפונים) */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .section p {
+        font-size: 1em;
+    }
+
+    input[type="number"] {
+        width: 80px;
+        font-size: 0.9em;
+    }
+
+    .result {
+        font-size: 1em;
+        padding: 8px;
+    }
 }
