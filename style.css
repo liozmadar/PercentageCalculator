@@ -22,7 +22,7 @@ body {
     border: 2px solid #8bc34a; /* מסגרת ירוקה בהירה */
     border-radius: 10px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); /* הצללה בולטת */
-    text-align: right;
+    text-align: right; /* יישור טקסט לימין */
 }
 
 h1 {
@@ -32,27 +32,46 @@ h1 {
     text-align: center;
 }
 
+.section {
+    border: 2px solid #8bc34a; /* מסגרת ירוקה על כל שורת החישוב */
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+    text-align: right; /* יישור הטקסט בתוך כל שורת חישוב לימין */
+}
+
 .section p {
     font-size: 1.1em;
-    margin: 16px 0;
+    margin: 0;
     color: #555;
-    white-space: nowrap;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* יישור שדות הקלט לתחילת השורה (מצד ימין) */
+    gap: 10px; /* רווח בין שדות הקלט לתוצאה */
+}
+
+.result {
+    font-size: 1.2em;
+    color: #388e3c;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border: 1px solid #8bc34a; /* מסגרת ירוקה בהירה */
+    border-radius: 6px;
+    margin-top: 10px;
+    text-align: right; /* יישור התוצאה לימין */
 }
 
 input[type="number"] {
     width: 100px;
     padding: 10px;
-    margin: 0 5px;
+    margin: 0;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 6px;
     text-align: center;
     background-color: #f9f9f9;
-    color: #888; /* צבע טקסט דהוי בהתחלה */
-    transition: border-color 0.3s, color 0.3s; /* שינוי צבע */
+    color: #888;
+    transition: border-color 0.3s, color 0.3s;
 }
 
 /* צבע דהוי עבור placeholder */
@@ -71,51 +90,4 @@ input[type="number"]:focus {
     outline: none;
     border-color: #8bc34a;
     background-color: #fff;
-}
-
-.result {
-    font-size: 1.2em;
-    color: #388e3c;
-    background-color: #e8f5e9; /* רקע ירוק בהיר לתוצאה */
-    padding: 10px;
-    border: 1px solid #8bc34a; /* מסגרת ירוקה בהירה */
-    border-radius: 6px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color: #007bff;
-    font-weight: bold;
-    margin-left: 5px;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 220px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 6px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    right: 50%;
-    margin-right: -110px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-span {
-    font-weight: bold;
-    color: #333;
 }
