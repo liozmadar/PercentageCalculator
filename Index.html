@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מחשבון אחוזים</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>מחשבון אחוזים</h1>
+
+        <!-- חישוב הוספת אחוז למספר -->
+        <div class="section">
+            <p>כמה זה <input type="number" id="add_number" placeholder="100" oninput="calculateAddPercentage()" onfocus="clearInput(this)" /> ועוד <input type="number" id="add_percentage" placeholder="20%" oninput="calculateAddPercentage()" onfocus="clearInput(this)" /> אחוז? תוצאה: <span id="add_result">120</span></p>
+        </div>
+
+        <!-- חישוב הפחתת אחוז ממספר -->
+        <div class="section">
+            <p>כמה זה <input type="number" id="sub_number" placeholder="100" oninput="calculateSubPercentage()" onfocus="clearInput(this)" /> פחות <input type="number" id="sub_percentage" placeholder="20%" oninput="calculateSubPercentage()" onfocus="clearInput(this)" /> אחוז? תוצאה: <span id="sub_result">80</span></p>
+        </div>
+
+        <!-- חישוב כמה זה חלק מתוך שלם באחוזים -->
+        <div class="section">
+            <p>כמה זה <input type="number" id="part_number" placeholder="20" oninput="calculatePercentageOfNumber()" onfocus="clearInput(this)" /> מתוך <input type="number" id="whole_number" placeholder="100" oninput="calculatePercentageOfNumber()" onfocus="clearInput(this)" />? תוצאה: <span id="percent_of_number">20</span>%</p>
+        </div>
+        
+      
+      <!-- חישוב כמה זה אחוז מתוך מספר -->
+<div class="section">
+    <p>כמה זה 
+        <input type="number" id="percent_value" placeholder="20%" oninput="calculatePercentOfTotal()" onfocus="clearInput(this)" /> 
+        אחוז מתוך 
+        <input type="number" id="total_value" placeholder="100" oninput="calculatePercentOfTotal()" onfocus="clearInput(this)" />? 
+        תוצאה: <span id="percent_result">80</span>
+    </p>
+</div>
+
+      
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
